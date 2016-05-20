@@ -25,7 +25,7 @@ def main(search_directory,link_directory):
         else:
             loc_3 = link_directory + non_hidden[i+2]
 
-        template_code = '<!-- Projects Row --> \n\
+        template_code = '               <!-- Projects Row --> \n\
                 <div class="row"> \n\
                     <div class="col-md-4 portfolio-item"> \n\
                         <img class="img-responsive" src="'+loc_1+'" alt="">\n\
@@ -39,9 +39,9 @@ def main(search_directory,link_directory):
                 </div> \n\
                 <br><br> \n\
                 <!-- /.row -->'
-    print(template_code)
+        print(template_code)
 
 
 if __name__ == '__main__':
-    print("hi")
+    # print("hi")
     main("/Users/cokelly/Google_Drive/Teir 2/Website building/briankellycsi.ie/Most recent/briankellycsi.ie/images/restoration_page/g_volvo/0_taken_apart","images/restoration_page/g_volvo/0_taken_apart/")
