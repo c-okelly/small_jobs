@@ -14,8 +14,9 @@ def create_rows(search_directory,link_directory):
     ## String to be return at the end
     return_string = ""
 
-    # Main row elements 
+    # Main row elements
     start_row = '<!-- Projects Row --> \n<div class="row"> \n'
+
 
     end_row = '</div> \n\<br><br> \n\<!-- /.row -->'
 
@@ -50,6 +51,10 @@ def create_rows(search_directory,link_directory):
         return_string += "\n\n" + template_code
         # print(template_code)
     return return_string
+
+def create_column_with_image():
+
+    return ""
 
 def main():
 
