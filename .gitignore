@@ -1,2 +1,7 @@
+# DS store file
 .DS_Store
+
+# Code output files
+html_code.txt
+
 
