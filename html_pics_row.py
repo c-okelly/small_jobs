@@ -14,6 +14,11 @@ def create_rows(search_directory,link_directory):
     ## String to be return at the end
     return_string = ""
 
+    # Main row elements 
+    start_row = '<!-- Projects Row --> \n<div class="row"> \n'
+
+    end_row = '</div> \n\<br><br> \n\<!-- /.row -->'
+
     ## Cycle through list and genreate html text
     list_index_range = len(non_hidden) -1
     for i in range(0,len(non_hidden),3):
