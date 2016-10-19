@@ -7,8 +7,12 @@ import subprocess
 
 def main():
 
+<<<<<<< HEAD
     # change_background("/Users/cokelly/Google_Drive/Code/small_jobs/test.jpg")
     get_random_picture_link("/Users/cokelly/Google_Drive/Google Photos/Sorted Photos/1. General Catagories")
+=======
+    change_background("/Users/cokelly/Google_Drive/Code/small_jobs/test.jpg")
+>>>>>>> ee794269a7bb47f4a7d4308e49c170f53408fa16
 
 def change_background(file_location):
 
@@ -16,6 +20,7 @@ def change_background(file_location):
     os.system(os_command)
 
 
+<<<<<<< HEAD
 def get_random_picture_link(search_directory):
     """Return a random picture from the serach directory"""
 
@@ -28,6 +33,8 @@ def get_random_picture_link(search_directory):
 
     print(file_list)
 
+=======
+>>>>>>> ee794269a7bb47f4a7d4308e49c170f53408fa16
 if __name__=='__main__':
 
     main()
