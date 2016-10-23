@@ -10,7 +10,7 @@ def main():
     # change_background("/Users/cokelly/Google_Drive/Code/small_jobs/test.jpg")
     get_random_picture_link("/Users/cokelly/Google_Drive/Google Photos/Sorted Photos/1. General Catagories")
 
-    change_background("/Users/cokelly/Google_Drive/Code/small_jobs/test.jpg")
+    # change_background("/Users/cokelly/Google_Drive/Code/small_jobs/test.jpg")
 
 
 def change_background(file_location):
@@ -32,6 +32,21 @@ def get_random_picture_link(search_directory):
 
     print(file_list)
 
+def check_first_10_files(search_directory):
+
+    all_directories = True
+
+
+
+    # Get file path
+    file_list = os.listdir(search_directory)
+
+    for new_path in file_list[0:10]:
+
+
+
+
+    return
 
 if __name__=='__main__':
 
