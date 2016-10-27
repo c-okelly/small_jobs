@@ -8,10 +8,10 @@ import subprocess
 def main():
 
     # change_background("/Users/cokelly/Google_Drive/Code/small_jobs/test.jpg")
-    get_random_picture_link("/Users/cokelly/Google_Drive/Google Photos/Sorted Photos/1. General Catagories")
+    # get_random_picture_link("/Users/cokelly/Google_Drive/Google Photos/Sorted Photos/1. General Catagories")
 
     # change_background("/Users/cokelly/Google_Drive/Code/small_jobs/test.jpg")
-
+    check_first_10_files("/Users/cokelly/Google_Drive/Google Photos/Sorted Photos/1. General Catagories")
 
 def change_background(file_location):
 
@@ -32,21 +32,24 @@ def get_random_picture_link(search_directory):
 
     print(file_list)
 
-def check_first_10_files(search_directory):
 
-    all_directories = True
+def has_mainly_pictures_in_directory(search_directory):
 
-
-
-    # Get file path
+    # Get file list in current path
     file_list = os.listdir(search_directory)
 
+    # Determine if first 10 files are majority direcories. If so condlue files only contains directories and move to subfolder
+    no_directories = 0
     for new_path in file_list[0:10]:
 
+        if (os.path.isdir(search_directory + "/" + new_path)):
+            no_directories += 1
 
+    if (no_directories > 6):
+        return True
+    else:
+        return False
 
-
-    return
 
 if __name__=='__main__':
 
