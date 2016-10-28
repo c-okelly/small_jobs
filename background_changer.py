@@ -11,7 +11,7 @@ def main():
 
     while True:
         set_background_to_random_picture("/Users/cokelly/Google_Drive/Google Photos/Sorted Photos")
-        time.sleep(5)
+        time.sleep(2)
 
 def set_background_to_random_picture(searchDirectroy):
 
@@ -21,6 +21,7 @@ def set_background_to_random_picture(searchDirectroy):
     # Exclude certian directories
     banned_list = ["/Users/cokelly/Google_Drive/Google Photos/Sorted Photos/100 sleeps of Eduardo", "/Users/cokelly/Google_Drive/Google Photos/Sorted Photos/Snapchat"]
     if pictureDirectroy in banned_list:
+        # print("Problem", pictureDirectroy) 
         pictureDirectroy = get_random_directory_of_mainly_pictures(searchDirectroy)
 
     # Get random picture
