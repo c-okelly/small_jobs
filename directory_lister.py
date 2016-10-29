@@ -4,11 +4,11 @@ import os
 
 class DirectoryWalker:
 
-    def fileList(self,target):
+    def fileList(self,target,extension=""):
 
-        all_files = []
         directores = []
         files = []
+        otherFiles = []
 
 
         currentDirectoryContents = os.listdir(target)
@@ -21,15 +21,24 @@ class DirectoryWalker:
             elif (os.path.isdir(target + '/' + item)):
                 directores.append(target + '/' + item)
 
-            else:
+            # Add files to files list and filter by extension
+            elif (len(extension) == 0):
                 files.append(target + '/' + item)
 
+            elif (item[-(len(extension)):]== extension):
+                files.append(target + '/' + item)
+
+            else:
+                otherFiles.append(target + '/' + item)
+
         for dir in directores:
-            sub_dir_contents = self.fileList(dir)
+            sub_dir_contents = self.fileList(dir,extension)
 
-            files.extend(sub_dir_contents[0])
+            files.extend(sub_dir_contents.get("files"))
 
-        return [files,directores]
+        # Filter out by extension
+
+        return {"files":files,"directores":directores,"otherFiles":otherFiles}
 
 if (__name__ == '__main__'):
 
@@ -37,4 +46,4 @@ if (__name__ == '__main__'):
 
     results = newOb.fileList("/Users/cokelly/Desktop/Reference cards")
 
-    print(results[0])
+    print(results)
